@@ -39,7 +39,7 @@ when 'rhel'
   end
 end
 
-include_recipe 'redis::install'
+include_recipe 'redis::install_from_release'
 
 if node['redis']['install_type'] == 'source'
   node.set['redis']['config']['logfile'] = '/var/log/redis/redis.log' if node['redis']['config']['logfile'] == 'stdout'

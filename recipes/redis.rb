@@ -50,18 +50,18 @@ if node['redis']['install_type'] == 'source'
   end
 
   directory node['redis']['conf_dir'] do
-    owner 'root'
-    group 'root'
-    mode 00755
-  end
+ #   owner 'root'
+ #   group 'root'
+ #   mode 00755
+  #end
 
-  directory node['redis']['config']['dir'] do
+  #directory node['redis']['config']['dir'] do
     owner node['redis']['user']
     group node['redis']['group']
     mode 00755
   end
 
-  directory ::File.dirname(node['redis']['config']['pidfile']) do
+  directory ::File.dirname(node['redis']['pid_file']) do
     owner node['redis']['user']
     group node['redis']['group']
     mode 00755

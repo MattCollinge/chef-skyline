@@ -39,7 +39,7 @@ default['skyline']['mini_duration'] = 3600
 default['skyline']['mini_namespace'] = 'mini.'
 default['skyline']['oculus_host'] = 'http://oculus.example.com'
 default['skyline']['pid_path'] = '/var/run/skyline'
-default['skyline']['redis_socket_path'] = node['redis']['config']['unixsocket']
+default['skyline']['redis_socket_path'] = "/tmp/redis.sock" #node['redis']['config']['unixsocket']
 
 # Analyzer Settings
 
